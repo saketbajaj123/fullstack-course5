@@ -117,6 +117,42 @@ body {
 a[ui-sref="admin.auth"] {
   color: #fff;
 }
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+.form-element-name{
+  display: block;
+  width: 150px;
+  float: left;
+  text-align:right;
+  padding-top: 7px;
+
+
+}
+
+.form-element-box{
+color:black;
+margin-left:20px;
+margin-top: 5px;
+padding:10px;
+box-sizing: content-box;
+height:5px;
+}
+
+.form-required {
+color:red;
+}
+
+button.disabled{
+  color: Red;
+
+}
 /* END FOOTER */
 
 /********** Medium devices only **********/
