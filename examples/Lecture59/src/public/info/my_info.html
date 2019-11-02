@@ -1,0 +1,15 @@
+<h1>My Info:</h1> <br>
+<div ng-if="miCrtl.getMyInfo == undefined">
+  Not Registered yet. Please Register <a ui-sref = "public.register">Here</a>
+
+</div>
+
+<div ng-if="miCrtl.getMyInfo != undefined">
+Name: {{miCrtl.getMyInfo.firstName+' '+miCrtl.lastName}}<br>
+Email: {{miCrtl.getMyInfo.emailAddress}}<br>
+Phone: {{miCrtl.getMyInfo.phoneNumber}}<br>
+Favorite : {{miCrtl.getMyInfo.favMenuItem}}<br>
+
+{{miCrtl.getFavObject}}
+
+</div>

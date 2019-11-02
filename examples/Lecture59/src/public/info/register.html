@@ -1,0 +1,80 @@
+<h1>Register Here for the Newsletter!</h1>
+<form name = 'regForm' novalidate>
+  <span class = "form-element-name">First Name<span class = 'form-required'>*</span>: </span>
+
+  <input class = "form-element-box" class = "form-element-box" type="text"
+      name = "firstName"
+
+      ng-model = "mrCtrl.obj.firstName"
+      required
+  >
+  <span ng-if="regForm.firstName.$invalid && regForm.firstName.$touched">
+        First Name is required.
+      </span>
+       <br>
+  <span class = "form-element-name">Last Name <span style="color:red;">*</span>:</span>
+
+  <input class = "form-element-box" type="text"
+      name = "lastName"
+
+      ng-model = "mrCtrl.obj.lastName"
+      required
+      >
+      <span ng-if="regForm.lastName.$invalid && regForm.lastName.$touched">
+        Last Name is required.
+      </span>
+
+       <br>
+  <span class = "form-element-name">Email Address <span style="color:red;">*</span>:</span>
+
+  <input class = "form-element-box" type="email"
+      name = "emailAddress"
+
+      ng-model = "mrCtrl.obj.emailAddress"
+      required
+
+      > <span ng-if="regForm.emailAddress.$invalid && regForm.emailAddress.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+
+          <br>
+  <span class = "form-element-name">Phone Number<span style="color:red;">*</span>: </span>
+
+  <input class = "form-element-box" type="text"
+      name = "phoneNumber"
+
+      ng-model = "mrCtrl.obj.phoneNumber"
+      pattern="((\d{3})-(\d{3})-(\d{4}))?(\d{10})?"
+      required
+      >
+      <span ng-if="regForm.phoneNumber.$invalid && regForm.phoneNumber.$touched">
+            Phone must be in the format ###-###-#### or ##########.
+          </span>
+          <br>
+
+
+
+  <span class = "form-element-name">Fav Menu Item<span style="color:red;">*</span>: </span>
+
+  <input class = {{mrCtrl.abc}} type="text"
+      name = "favMenuItem"
+
+      ng-model = "mrCtrl.obj.favMenuItem"
+      pattern = "(^{{mrCtrl.check}})$"
+
+      >
+      <span ng-if="regForm.favMenuItem.$invalid && regForm.favMenuItem.$touched">
+            Please enter valid favourite dish like A1.
+          </span>
+
+      <br>
+
+      <!-- <span ng-if = "mrCtrl.isInMyArray(mrCtrl.obj.favMenuItem)"> Item in Array </span> -->
+
+      <button style = "margin-top:20px"
+              ng-disabled="regForm.$invalid"
+              ng-click="mrCtrl.submit()">Submit</button>
+
+      <span ng-if = "mrCtrl.showSubmitted"> Registered!!! </span>
+
+</form>
