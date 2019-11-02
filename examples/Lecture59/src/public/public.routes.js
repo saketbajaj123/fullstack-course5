@@ -1,5 +1,4 @@
 
-public Routes.js
 (function() {
 'use strict';
 
